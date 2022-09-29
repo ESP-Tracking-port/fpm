@@ -124,7 +124,7 @@ public:
 
     inline fixed& operator+=(const fixed& y) noexcept
     {
-        m_value += static_cast<BaseType>(y.m_value);
+        m_value += static_cast<decltype(m_value)>(y.m_value);
         return *this;
     }
 
